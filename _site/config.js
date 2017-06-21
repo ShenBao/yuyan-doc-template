@@ -10,7 +10,7 @@ var CONFIG = {
   // sidebar file
   sidebar_file: "sidebar.md",
   // github pro name
-  base_url: "http://github.com/xx/xx/edit/gh-pages",
+  base_url: "http://github.com/ShenBao/idoc-template/edit/master",
   // github url 
   github_url: "http://github.com/ShenBao/idoc-template",
   // disqus Setting
