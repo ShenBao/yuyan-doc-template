@@ -287,7 +287,8 @@ function show_loading() {
   return loading;
 }
 
-function router() { 
+// router start
+function router() {
   var path = location.hash.replace(/#([^#]*)(#.*)?/, './$1');
 
   var hashArr = location.hash.split('#');
@@ -429,3 +430,4 @@ function router() {
     $(ditto.loading_id).hide();
   });
 }
+// router end
