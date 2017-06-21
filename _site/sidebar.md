@@ -11,36 +11,7 @@
 1. [欢乐颂](#docs/a)
 1. [左右眼](#docs/b)
 1. [生活](#docs/c)
-1. [欢乐颂](#docs/a)
-1. [左右眼](#docs/b)
-1. [生活](#docs/c)
-1. [欢乐颂](#docs/a)
-1. [左右眼](#docs/b)
-1. [生活](#docs/c)
-1. [欢乐颂](#docs/a)
-1. [左右眼](#docs/b)
-1. [生活](#docs/c)
-1. [欢乐颂](#docs/a)
-1. [左右眼](#docs/b)
-1. [生活](#docs/c)
-1. [欢乐颂](#docs/a)
-1. [左右眼](#docs/b)
-1. [生活](#docs/c)
-1. [欢乐颂](#docs/a)
-1. [左右眼](#docs/b)
-1. [生活](#docs/c)
-1. [欢乐颂](#docs/a)
-1. [左右眼](#docs/b)
-1. [生活](#docs/c)
-1. [欢乐颂](#docs/a)
-1. [左右眼](#docs/b)
-1. [生活](#docs/c)
-1. [欢乐颂](#docs/a)
-1. [左右眼](#docs/b)
-1. [生活](#docs/c)
-1. [欢乐颂](#docs/a)
-1. [左右眼](#docs/b)
-1. [生活](#docs/c)
+
 
 
 ## 其他
@@ -48,4 +19,4 @@
 - [反馈意见](https://github.com///issues)
 
 
-<br/><br/><br/><br/>
+<br/><br/><br/>
