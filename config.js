@@ -1,3 +1,5 @@
+
+// CONFIG Setting
 var CONFIG = {
   // your website's title
   document_title: "idoc-template",
