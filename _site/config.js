@@ -9,11 +9,11 @@ var CONFIG = {
   sidebar_file: "sidebar.md",
 
   // where the docs are actually stored on github - so you can edit
-  base_url: "https://github.com/xx/xx/edit/gh-pages",
+  base_url: "http://github.com/xx/xx/edit/gh-pages",
 
-  site_url: "https://shenbao.github.io/idoc-template",
+  site_url: "http://shenbao.github.io/idoc-template",
 
-  github_url: "https://github.com/ShenBao/idoc-template",
+  github_url: "http://github.com/ShenBao/idoc-template",
 
   disqus_username: "ShenBao",
 
