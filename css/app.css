@@ -132,7 +132,7 @@ input.searchButton {
 
 #content {
     padding-top: 10px;
-    padding-bottom: 150px;
+    padding-bottom: 50px;
 	margin-left: 20px;
 	margin-right: 20px;
     font-size: 0.8rem;
@@ -525,4 +525,28 @@ color: #66d9ef;
 
 .token.entity {
 	cursor: help;
+}
+
+
+/*footer*/
+footer {
+    padding-top: 10px;
+    padding-bottom: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 0.8rem;
+    line-height: 1.3rem;
+    /* border: 1px solid black; */
+    counter-reset: section;
+}
+footer p{
+    text-align: center;
+}
+@media (min-width: 40rem){
+    footer {
+        width: 580px;
+        padding-left: 330px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
 }
