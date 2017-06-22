@@ -9,6 +9,8 @@ var CONFIG = {
   index: "README.md",
   // sidebar file
   sidebar_file: "sidebar.md",
+  // search_bar Setting
+  search_bar: false,
   // github pro name
   base_url: "http://github.com/ShenBao/idoc-template/edit/master",
   // github url 

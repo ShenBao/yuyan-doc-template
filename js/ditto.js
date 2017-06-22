@@ -69,7 +69,7 @@ function init_sidebar_section() {
     $.get(ditto.sidebar_file, function (data) {
         $(ditto.sidebar_id).html(marked(data));
 
-        if (ditto.search_bar) {
+        if (ditto.search_bar && CONFIG.search_bar) {
            init_searchbar();
         }
 
