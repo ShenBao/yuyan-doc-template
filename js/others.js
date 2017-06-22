@@ -1,3 +1,6 @@
+/*
+    others
+*/
 
 $(document).ready(function() {
 	
