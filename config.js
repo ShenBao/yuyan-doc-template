@@ -17,8 +17,10 @@ var CONFIG = {
   github_url: "http://github.com/ShenBao/idoc-template",
   // disqus Setting
   disqus_username: "ShenBao",
+  disqus_show: true,
   // hypercomments Setting
-  hypercomments_userid: 91931
+  hypercomments_userid: 91931,
+  hypercomments_show: false
 };
 
 // **************************

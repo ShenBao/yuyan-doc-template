@@ -42,8 +42,7 @@ var getHash = function (hash) {
   }
 };
 
-// var disqusCode = '<h3>留言</h3><div id="hypercomments_widget"></div><div id="disqus_thread"></div>';
-var disqusCode = '</div><div id="disqus_thread"></div>';
+var disqusCode = '<h3>留言</h3><div id="hypercomments_widget"></div><div id="disqus_thread"></div>';
 var menu = new Array();
 
 function initialize() {
@@ -337,38 +336,42 @@ function router() {
     });
 
     // 加载disqus
-    (function() {
-      // http://docs.disqus.com/help/2/
-      window.disqus_shortname = CONFIG.disqus_username;
-      window.disqus_identifier = (location.hash ? location.hash.replace("#", "") : 'READEME');
-      window.disqus_title = $(ditto.content_id + " h1").text();
-      window.disqus_url = CONFIG.site_url + (location.hash ? location.hash.replace("#", "") : 'README');
-
-      // http://docs.disqus.com/developers/universal/
+    if(CONFIG.disqus_show){
       (function() {
-        var dsq = document.createElement('script');
-        dsq.type = 'text/javascript';
-        dsq.async = true;
-        dsq.src = 'https://' + window.disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        // http://docs.disqus.com/help/2/
+        window.disqus_shortname = CONFIG.disqus_username;
+        window.disqus_identifier = (location.hash ? location.hash.replace("#", "") : 'READEME');
+        window.disqus_title = $(ditto.content_id + " h1").text();
+        window.disqus_url = CONFIG.site_url + (location.hash ? location.hash.replace("#", "") : 'README');
+
+        // http://docs.disqus.com/developers/universal/
+        (function() {
+          var dsq = document.createElement('script');
+          dsq.type = 'text/javascript';
+          dsq.async = true;
+          dsq.src = 'https://' + window.disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
       })();
-    })();
+    }
 
     //加载hypercomments
-    // (function() {
-    //   var hypercomments_userid = CONFIG.hypercomments_userid;
-    //   _hcwp = window._hcwp || [];
-    //   _hcwp.push({widget:"Stream", widget_id: hypercomments_userid});
-    //   (function() {
-    //   if("HC_LOAD_INIT" in window)return;
-    //   HC_LOAD_INIT = true;
-    //   var lang = (navigator.language || navigator.systemLanguage || navigator.userLanguage || "en").substr(0, 2).toLowerCase();
-    //   var hcc = document.createElement("script"); hcc.type = "text/javascript"; hcc.async = true;
-    //   hcc.src = ("https:" == document.location.protocol ? "https" : "http")+"://w.hypercomments.com/widget/hc/"+hypercomments_userid+"/"+lang+"/widget.js";
-    //   var s = document.getElementsByTagName("script")[0];
-    //   s.parentNode.insertBefore(hcc, s.nextSibling);
-    //   })();
-    // })();
+    if(CONFIG.hypercomments_show){
+      (function() {
+        var hypercomments_userid = CONFIG.hypercomments_userid;
+        _hcwp = window._hcwp || [];
+        _hcwp.push({widget:"Stream", widget_id: hypercomments_userid});
+        (function() {
+        if("HC_LOAD_INIT" in window)return;
+        HC_LOAD_INIT = true;
+        var lang = (navigator.language || navigator.systemLanguage || navigator.userLanguage || "en").substr(0, 2).toLowerCase();
+        var hcc = document.createElement("script"); hcc.type = "text/javascript"; hcc.async = true;
+        hcc.src = ("https:" == document.location.protocol ? "https" : "http")+"://w.hypercomments.com/widget/hc/"+hypercomments_userid+"/"+lang+"/widget.js";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hcc, s.nextSibling);
+        })();
+      })();
+    }
 
     var perc = ditto.save_progress ? store.get('page-progress') || 0 : 0;
 
