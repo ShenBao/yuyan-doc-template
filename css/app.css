@@ -4,12 +4,12 @@
 html { font-size: 100%; }
 
 /* Medium screens (640px) */
-@media (min-width: 40rem) {
+@media (min-width: 640px) {
   html { font-size: 112%; }
 }
 
 /* Large screens (1024px) */
-@media (min-width: 64rem) {
+@media (min-width: 1024px) {
   html { font-size: 120%; }
 }
 
@@ -130,9 +130,8 @@ input.searchButton {
   height: 18px;
 }
 
-#content {
-    padding-top: 10px;
-    padding-bottom: 50px;
+#main {
+    padding-top: 15px;
 	margin-left: 20px;
 	margin-right: 20px;
     font-size: 0.8rem;
@@ -143,9 +142,33 @@ input.searchButton {
 	counter-reset: section;
 }
 
-@media (min-width: 40rem) {
-	#content {
-		width: 580px;
+@media (min-width: 640px) {
+	#main {
+		width: 420px;
+		padding-left:330px;
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+}
+@media (min-width: 850px) {
+	#main {
+		width: 560px;
+		padding-left:330px;
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+}
+@media (min-width: 1024px) {
+	#main {
+		width: 700px;
+		padding-left:330px;
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+}
+@media (min-width: 1200px) {
+	#main {
+		width: 800px;
 		padding-left:330px;
 		margin-left: 0px;
 		margin-right: 0px;
@@ -296,7 +319,7 @@ input.searchButton {
     width: 70px;
     top: 20px;
 
-    margin-left: 930px;
+    margin-left: 640px;
     margin-top: 0px;
 
     color: #FFF;
@@ -322,7 +345,7 @@ input.searchButton {
     width: 70px;
     top: 45px;
 
-    margin-left: 930px;
+    margin-left: 640px;
     margin-top: 0px;
 
     color: #FFF;
@@ -338,6 +361,27 @@ input.searchButton {
 #edit:hover {
     background-color: #444;
     cursor: pointer;
+}
+
+@media (min-width: 640px) {
+	#back_to_top,#edit {
+		margin-left: 440px;
+	}
+}
+@media (min-width: 850px) {
+	#back_to_top,#edit {
+		margin-left: 580px;
+	}
+}
+@media (min-width: 1024px) {
+	#back_to_top,#edit {
+		margin-left: 720px;
+	}
+}
+@media (min-width: 1200px) {
+	#back_to_top,#edit {
+		margin-left: 820px;
+	}
 }
 
 #loading, #error {
@@ -407,6 +451,7 @@ input.searchButton {
 
 .progress-indicator-2 {
     position: fixed;
+    z-index: 10;
     top: 0;
     left: 0;
     height: 3px;
@@ -530,7 +575,7 @@ color: #66d9ef;
 
 /*footer*/
 footer {
-    padding-top: 10px;
+    padding-top: 50px;
     padding-bottom: 50px;
     margin-left: 20px;
     margin-right: 20px;
@@ -542,11 +587,24 @@ footer {
 footer p{
     text-align: center;
 }
-@media (min-width: 40rem){
-    footer {
-        width: 580px;
-        padding-left: 330px;
-        margin-left: 0px;
-        margin-right: 0px;
-    }
+
+@media (min-width: 640px) {
+	footer {
+		width: 420px;
+	}
+}
+@media (min-width: 850px) {
+	footer {
+		width: 560px;
+	}
+}
+@media (min-width: 1024px) {
+	footer {
+		width: 700px;
+	}
+}
+@media (min-width: 1200px) {
+	footer {
+		width: 800px;
+	}
 }

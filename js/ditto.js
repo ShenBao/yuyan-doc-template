@@ -1,6 +1,8 @@
 var ditto = {
     // page element ids
+    main_id: "#main",
     content_id: "#content",
+    comment_id: "#comment",
     sidebar_id: "#sidebar",
     edit_id: "#edit",
     back_to_top_id: "#back_to_top",
@@ -321,7 +323,8 @@ function router() {
   var loading = show_loading();
   $.get(path, function(data) {
     $(ditto.error_id).hide();
-    $(ditto.content_id).html(marked(data) + disqusCode);
+    $(ditto.content_id).html(marked(data));
+    $(ditto.comment_id).html(disqusCode);
     if ($(ditto.content_id + " h1").text() === ditto.document_title) {
       document.title = ditto.document_title;
     } else {
