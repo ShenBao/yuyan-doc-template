@@ -56,20 +56,32 @@ $(document).ready(function() {
                     color : randomColor()
             });
             document.body.appendChild(d);
-    }
-    function css(css){
-            var style = document.createElement("style");
-                style.type="text/css";
-                try{
-                    style.appendChild(document.createTextNode(css));
-                }catch(ex){
-                    style.styleSheet.cssText = css;
-                }
-                document.getElementsByTagName('head')[0].appendChild(style);
-    }
-        function randomColor(){
-                return "rgb("+(~~(Math.random()*255))+","+(~~(Math.random()*255))+","+(~~(Math.random()*255))+")";
         }
-})(window,document);
+        function css(css){
+                var style = document.createElement("style");
+                        style.type="text/css";
+                        try{
+                        style.appendChild(document.createTextNode(css));
+                        }catch(ex){
+                        style.styleSheet.cssText = css;
+                        }
+                        document.getElementsByTagName('head')[0].appendChild(style);
+        }
+                function randomColor(){
+                        return "rgb("+(~~(Math.random()*255))+","+(~~(Math.random()*255))+","+(~~(Math.random()*255))+")";
+                }
+        })(window,document);
 
+        (function creatFooter(){
+            var footer = '<p class="copyright text-muted">'+
+                'Copyright © '+ CONFIG.github_user_name+ CONFIG.data+
+                '<br>'+
+                'Theme by <a href="https://github.com/'+CONFIG.github_user_name+
+                '">'+CONFIG.github_user_name+'</a> |'+
+                '<iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" '+
+                'width="100px" height="20px" src="https://ghbtns.com/github-btn.html?user='+CONFIG.github_user_name+
+                '&amp;repo='+CONFIG.github_repository+'&amp;type=star&amp;count=true">'
+                '</iframe></p>';
+            $('footer').html(footer);
+        })();
 });

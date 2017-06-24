@@ -15,12 +15,15 @@ var CONFIG = {
   base_url: "http://github.com/ShenBao/idoc-template/edit/master",
   // github url 
   github_url: "http://github.com/ShenBao/idoc-template",
+  github_user_name: "ShenBao",
+  github_repository: "idoc-template",
   // disqus Setting
   disqus_username: "ShenBao",
   disqus_show: true,
   // hypercomments Setting
   hypercomments_userid: 91931,
-  hypercomments_show: false
+  hypercomments_show: false,
+  data: 2017
 };
 
 // **************************
