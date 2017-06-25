@@ -420,6 +420,7 @@ input.searchButton {
 
 #page-turning {
     position:fixed;
+    z-index: 30;
     left: 0;
     bottom: 15px;
 	margin-left: 20px;
