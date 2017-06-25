@@ -408,13 +408,68 @@ input.searchButton {
 	}
 }
 
+/*---------------------------------------------page-turning-----------------------------------------*/
+
+#page-turning {
+    position:fixed;
+    left: 0;
+    bottom: 15px;
+	margin-left: 20px;
+	margin-right: 20px;
+    width: 100%;
+    font-size: 0.8rem;
+	line-height:1.3rem;
+    /* border: 1px solid black; */
+
+	counter-reset: section;
+}
+
+@media (min-width: 640px) {
+	#page-turning {
+		width: 420px;
+		padding-left:330px;
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+}
+@media (min-width: 850px) {
+	#page-turning {
+		width: 560px;
+		padding-left:330px;
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+}
+@media (min-width: 1024px) {
+	#page-turning {
+		width: 700px;
+		padding-left:330px;
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+}
+@media (min-width: 1200px) {
+	#page-turning {
+		width: 800px;
+		padding-left:330px;
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+}
+
 #flip{
-	position:fixed;
+	
 	height:20px;
 	width:100%;
 	bottom:10px;
 	font-size:10px;
 	text-align:center;
+}
+@media (min-width: 640px) {
+	#flip{
+		margin: 0 auto;
+        width: 155px;
+	}
 }
 
 #pageup,#pagedown{
@@ -442,12 +497,6 @@ input.searchButton {
 	margin-left:5px;
 }
 
-@media (min-width: 40rem) {
-	#flip{
-		margin-left:545px;
-		width:150px;
-	}
-}
 
 .progress-indicator-2 {
     position: fixed;
