@@ -512,7 +512,7 @@ input.searchButton {
 
 .progress-indicator-2 {
     position: fixed;
-    z-index: 10;
+    z-index: 100;
     top: 0;
     left: 0;
     height: 3px;
