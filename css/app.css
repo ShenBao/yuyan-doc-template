@@ -131,12 +131,13 @@ input.searchButton {
 }
 
 #main {
+    position: relative;
     padding-top: 15px;
 	margin-left: 20px;
 	margin-right: 20px;
     font-size: 0.8rem;
 	line-height:1.3rem;
-
+    min-height: 30%;
     /* border: 1px solid black; */
 
 	counter-reset: section;
@@ -145,6 +146,7 @@ input.searchButton {
 @media (min-width: 640px) {
 	#main {
 		width: 420px;
+        min-height: 100%;
 		padding-left:330px;
 		margin-left: 0px;
 		margin-right: 0px;
@@ -153,6 +155,7 @@ input.searchButton {
 @media (min-width: 850px) {
 	#main {
 		width: 560px;
+        min-height: 100%;
 		padding-left:330px;
 		margin-left: 0px;
 		margin-right: 0px;
@@ -161,6 +164,7 @@ input.searchButton {
 @media (min-width: 1024px) {
 	#main {
 		width: 700px;
+        min-height: 100%;
 		padding-left:330px;
 		margin-left: 0px;
 		margin-right: 0px;
@@ -169,6 +173,7 @@ input.searchButton {
 @media (min-width: 1200px) {
 	#main {
 		width: 800px;
+        min-height: 100%;
 		padding-left:330px;
 		margin-left: 0px;
 		margin-right: 0px;
@@ -386,23 +391,24 @@ input.searchButton {
 
 #loading, #error {
     display: none;
-    position: fixed;
+    position: absolute;
 
     top: 0;
 	height: 17px;
 
     font-size: 14px;
+    text-align: center;
 }
 
 @media (min-width: 40rem) {
 	#loading, #error {
 	    display: none;
-		position: fixed;
+		position: absolute;
 
 		height: 17px;
-		top: 45%;
+		top: 25%;
 
-		margin-left: 560px;
+		/*margin-left: 560px;*/
 
 		font-size: 14px;
 	}
