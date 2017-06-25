@@ -43,6 +43,7 @@ body {
 	width: 280px;
     position: fixed;
     height: 100%;
+    z-index: 20;
     margin-right: 20px;
 	padding-bottom:0px;
     padding-top: 0px;
@@ -132,6 +133,7 @@ input.searchButton {
 
 #main {
     position: relative;
+    z-index: 1;
     padding-top: 15px;
 	margin-left: 20px;
 	margin-right: 20px;
