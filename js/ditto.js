@@ -330,7 +330,9 @@ function router() {
     } else {
       document.title = $(ditto.content_id + " h1").text() + " - " + ditto.document_title;
     }
+    // img
     normalize_paths();
+    // toc
     create_page_anchors();
 
     // 完成代码高亮
