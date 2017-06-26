@@ -199,7 +199,6 @@ function li_create_linkage(li_tag, li, header_level) {
     $('html, body').animate({
       scrollTop: header.offset().top
     }, 200);
-
     // highlight the relevant section
     original_color = header.css("color");
     header.animate({ color: "#ED1C24", }, 500, function() {
