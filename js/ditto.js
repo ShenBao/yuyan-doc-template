@@ -221,7 +221,7 @@ function create_page_anchors() {
     $('#content h' + i).map(function() {
       var content = $(this).text();
       headers.push(content);
-      $(this).addClass(replace_symbols(content));
+      $(this).addClass(replace_symbols(content)).addClass('page-toc');
       this.id = replace_symbols(content);
       $(this).hover(function () {
         $(this).html(content +
@@ -232,7 +232,7 @@ function create_page_anchors() {
           location.hash.split('#')[1] + '" onclick="goTop()">⇧</a>');
       }, function () {
         $(this).html(content);
-      });
+      }).attr('toc',i);
       $(this).on('click', 'a.section-link', function(event) {
         event.preventDefault();
         history.pushState(null, null, '#' + location.hash.split('#')[1] + '#' + replace_symbols(content));
