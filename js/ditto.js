@@ -241,17 +241,6 @@ function create_page_anchors() {
     });
   }
   // creat page toc
-  // if ((i === 2) && headers.length !== 0) {
-  //   var ul_tag = $('<ol></ol>')
-  //     .insertAfter('#content h1')
-  //     .addClass('content-toc')
-  //     .attr('id', 'content-toc');
-  //   for (var j = 0; j < headers.length; j++) {
-  //     var li_tag = $('<li></li>').html('<a href="#' + location.hash.split('#')[1] + '#' + headers[j] + '">' + headers[j] + '</a>');
-  //     ul_tag.append(li_tag);
-  //     li_create_linkage(li_tag, i);
-  //   }
-  // }
   var ul_tag = $('<ol></ol>')
       .insertAfter('#content h1')
       .addClass('content-toc')
