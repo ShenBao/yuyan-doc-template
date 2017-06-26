@@ -182,18 +182,19 @@ function replace_symbols(text) {
     .replace(/[()]/g, '');
 }
 
-function li_create_linkage(li_tag, header_level) {
+function li_create_linkage(li_tag, li, header_level) {
   // add custom id and class attributes
-  html_safe_tag = replace_symbols(li_tag.text());
-  li_tag.attr('data-src', html_safe_tag);
+  // html_safe_tag = replace_symbols(li_tag.text());
+  li_tag.attr('data-src', li.textContent);
   li_tag.attr("class", "link");
+  li_tag.addClass('toc-'+li.localName)
 
   // add click listener - on click scroll to relevant header section
   li_tag.click(function(e) {
     e.preventDefault();
     // scroll to relevant section
     var header = $(
-      ditto.content_id + " h" + header_level + "." + li_tag.attr('data-src')
+      ditto.content_id + " h" + li.attributes.toc.nodeValue + "." + li_tag.attr('data-src')
     );
     $('html, body').animate({
       scrollTop: header.offset().top
@@ -247,10 +248,9 @@ function create_page_anchors() {
       .attr('id', 'content-toc');
   var tocList = $('.page-toc');
   for (var index = 0; index < tocList.length; index++) {
-    var li_tag = $('<li></li>').html('<a href="#' + location.hash.split('#')[1] + '#' + tocList[index].textContent + '">' + tocList[index].textContent + '</a>')
-        .addClass('toc-'+tocList[index].localName);
+    var li_tag = $('<li></li>').html('<a href="#' + location.hash.split('#')[1] + '#' + tocList[index].textContent + '">' + tocList[index].textContent + '</a>');
     ul_tag.append(li_tag);
-    li_create_linkage(li_tag, tocList[index].attributes.toc.nodeValue);
+    li_create_linkage(li_tag, tocList[index]);
   }
 
 }
