@@ -241,7 +241,7 @@ function create_page_anchors() {
   }
   // creat page toc
   var tocList = $('.page-toc');
-  if(tocList.length>0){
+  if(tocList.length > 0){
     var ul_tag = $('<ol></ol>')
         .insertAfter('#content h1')
         .addClass('content-toc')
