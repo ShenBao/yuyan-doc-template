@@ -214,7 +214,7 @@ function create_page_anchors() {
   // if there is a match, create click listeners
   // and scroll to relevant sections
 
-  // go through header level 1 to 3
+  // go through header level 2 to 4
   for (var i = 2; i <= 4; i++) {
     // parse all headers
     var headers = [];
@@ -239,19 +239,31 @@ function create_page_anchors() {
         goSection(replace_symbols(content));
       });
     });
-
-    if ((i === 2) && headers.length !== 0) {
-      var ul_tag = $('<ol></ol>')
-        .insertAfter('#content h1')
-        .addClass('content-toc')
-        .attr('id', 'content-toc');
-      for (var j = 0; j < headers.length; j++) {
-        var li_tag = $('<li></li>').html('<a href="#' + location.hash.split('#')[1] + '#' + headers[j] + '">' + headers[j] + '</a>');
-        ul_tag.append(li_tag);
-        li_create_linkage(li_tag, i);
-      }
-    }
   }
+  // creat page toc
+  // if ((i === 2) && headers.length !== 0) {
+  //   var ul_tag = $('<ol></ol>')
+  //     .insertAfter('#content h1')
+  //     .addClass('content-toc')
+  //     .attr('id', 'content-toc');
+  //   for (var j = 0; j < headers.length; j++) {
+  //     var li_tag = $('<li></li>').html('<a href="#' + location.hash.split('#')[1] + '#' + headers[j] + '">' + headers[j] + '</a>');
+  //     ul_tag.append(li_tag);
+  //     li_create_linkage(li_tag, i);
+  //   }
+  // }
+  var ul_tag = $('<ol></ol>')
+      .insertAfter('#content h1')
+      .addClass('content-toc')
+      .attr('id', 'content-toc');
+  var tocList = $('.page-toc');
+  for (var index = 0; index < tocList.length; index++) {
+    var li_tag = $('<li></li>').html('<a href="#' + location.hash.split('#')[1] + '#' + tocList[index].textContent + '">' + tocList[index].textContent + '</a>')
+        .addClass('toc-'+tocList[index].localName);
+    ul_tag.append(li_tag);
+    li_create_linkage(li_tag, tocList[index].attributes.toc.nodeValue);
+  }
+
 }
 
 function normalize_paths() {
