@@ -240,15 +240,17 @@ function create_page_anchors() {
     });
   }
   // creat page toc
-  var ul_tag = $('<ol></ol>')
-      .insertAfter('#content h1')
-      .addClass('content-toc')
-      .attr('id', 'content-toc');
   var tocList = $('.page-toc');
-  for (var index = 0; index < tocList.length; index++) {
-    var li_tag = $('<li></li>').html('<a href="#' + location.hash.split('#')[1] + '#' + tocList[index].textContent + '">' + tocList[index].textContent + '</a>');
-    ul_tag.append(li_tag);
-    li_create_linkage(li_tag, tocList[index]);
+  if(tocList.length>0){
+    var ul_tag = $('<ol></ol>')
+        .insertAfter('#content h1')
+        .addClass('content-toc')
+        .attr('id', 'content-toc');
+    for (var index = 0; index < tocList.length; index++) {
+      var li_tag = $('<li></li>').html('<a href="#' + location.hash.split('#')[1] + '#' + tocList[index].textContent + '">' + tocList[index].textContent + '</a>');
+      ul_tag.append(li_tag);
+      li_create_linkage(li_tag, tocList[index]);
+    }
   }
 
 }
