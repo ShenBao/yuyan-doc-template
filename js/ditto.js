@@ -213,7 +213,6 @@ function create_page_anchors() {
   // create page anchors by matching li's to headers
   // if there is a match, create click listeners
   // and scroll to relevant sections
-
   // go through header level 2 to 4
   for (var i = 2; i <= 4; i++) {
     // parse all headers
