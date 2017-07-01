@@ -1,7 +1,7 @@
 
 # Emoji表情
 
-将对应表情的特殊字符复制后输入到你的markdown文本中，预览即可显示emoji表情。如：`:blush:`,显示效果：:blush:。
+将对应表情的特殊字符复制后输入到你的markdown文本中，预览即可显示emoji表情。如：`:blush:`,显示效果：<b>:blush:</b>。
 
 ## 人物
 
