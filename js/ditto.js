@@ -335,7 +335,7 @@ function router() {
     normalize_paths();
     // toc
     create_page_anchors();
-
+    // emojify
     emojify.setConfig({
         emojify_tag_type : 'div',           // Only run emojify.js on this element
         only_crawl_id    : null,            // Use to restrict where emojify.js applies

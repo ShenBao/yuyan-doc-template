@@ -10,6 +10,7 @@ idoc-template
 - 自动生成目录
 - 翻页
 - 代码高亮
+- Emoji表情(ps:由于原版里对table支持不好，所以改了源码<span>:sob:</span>)
 
 
 
