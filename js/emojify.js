@@ -306,15 +306,15 @@
 
                 var nodes = [];
 
-                var elementsBlacklist = new RegExp(defaultConfig.blacklist.elements.join('|'), 'i'),
-                    classesBlacklist = new RegExp(defaultConfig.blacklist.classes.join('|'), 'i');
+               var elementsBlacklist = new RegExp('^(' + defaultConfig.blacklist.elements.join('|') + ')$', 'i'),
+                      classesBlacklist = new RegExp(defaultConfig.blacklist.classes.join('|'), 'i');
 
                 if(typeof win.document.createTreeWalker !== 'undefined') {
                     var nodeIterator = win.document.createTreeWalker(
                         el,
                         win.NodeFilter.SHOW_TEXT | win.NodeFilter.SHOW_ELEMENT,
                         function(node) {
-                            if(node.nodeType !== 1) {
+                            if(node.nodeType === node.TEXT_NODE) {
                                 /* Text Node? Good! */
                                 return win.NodeFilter.FILTER_ACCEPT;
                             }
