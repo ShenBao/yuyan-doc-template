@@ -10,6 +10,7 @@
 ## 目录
 1. [关于我](#docs/me)
 1. [目录测试](#docs/toc)
+1. [emoji](#docs/emoji)
 1. [欢乐颂](#docs/a)
 1. [左右眼](#docs/b)
 
