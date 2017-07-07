@@ -183,10 +183,10 @@ function replace_symbols(text) {
     .replace(/[()]/g, '');
 }
 
-function li_create_linkage(li_tag, li, header_level) {
+function li_create_linkage(li_tag, li, level) {
   // add custom id and class attributes
   // html_safe_tag = replace_symbols(li_tag.text());
-  li_tag.attr('data-src', replace_symbols(li.textContent));
+  li_tag.attr('data-src', level+replace_symbols(li.textContent));
   li_tag.attr("class", "link");
   li_tag.addClass('toc-'+li.localName)
 
@@ -194,9 +194,8 @@ function li_create_linkage(li_tag, li, header_level) {
   li_tag.click(function(e) {
     e.preventDefault();
     // scroll to relevant section
-    var header = $(
-      ditto.content_id + " h" + li.attributes.toc.nodeValue + "." + li_tag.attr('data-src')
-    );
+    var sel = ditto.content_id + " h" + li.attributes.toc.nodeValue + "." + li_tag.attr('data-src');
+    var header = $(sel);
     $('html, body').animate({
       scrollTop: header.offset().top
     }, 200);
@@ -221,7 +220,7 @@ function create_page_anchors() {
     $('#content h' + i).map(function() {
       var content = $(this).text();
       headers.push(content);
-      $(this).addClass(replace_symbols(content)).addClass('page-toc');
+      $(this).addClass('page-toc');
       this.id = replace_symbols(content);
       $(this).hover(function () {
         $(this).html(content +
@@ -249,10 +248,10 @@ function create_page_anchors() {
         .addClass('content-toc')
         .attr('id', 'content-toc');
     for (var index = 0; index < tocList.length; index++) {
-      var li_tag = $('<li></li>').html('<a href="#' + location.hash.split('#')[1] + '#' + replace_symbols(tocList[index].textContent) + '">' + tocList[index].textContent + '</a>');
+      tocList.eq(index).attr('id',index+replace_symbols(tocList[index].textContent)).addClass(index+replace_symbols(tocList[index].textContent));
+      var li_tag = $('<li></li>').html('<a href="#' + location.hash.split('#')[1] + '#'+index+ replace_symbols(tocList[index].textContent) + '">' + tocList[index].textContent + '</a>');
       ul_tag.append(li_tag);
-      console.log(tocList.eq(2))
-      li_create_linkage(li_tag, tocList[index]);
+      li_create_linkage(li_tag, tocList[index],index);
     }
   }
 
