@@ -45,7 +45,7 @@
 
 ## QR CODE
 
-<p>注：添加时请备注来源及姓名！！！</p>
+<p>注：添加时请备注来源及姓名！</p>
 <div height="300" >
     <img src="images/about-me/me-qr-code.png" alt="我的QQ二维码\微信二维码" width="400" >
 </div>
