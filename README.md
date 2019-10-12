@@ -1,19 +1,22 @@
-# idoc-template
+# yuyan-idoc-template
 
-idoc-template
-
-文档管理模板
-
-
-- 支持md文件
+- 支持 md 文件
 - 代码高亮
-- 支持Emoji表情(ps:由于原版里对table支持不好，所以改了源码<span>:sob:</span>)
-- 自动生成文档目录
-    - 一级目录为文章标题，每篇一个
-    - 二、三、四级目录自动抓取在文章标题后显示
-- 翻页按钮
-- 支持disqus评论
+- 支持Emoji表情
 
+## use
 
+```bash
+npm i
 
+npm run dev
+npm run build
 
+npm run index
+```
+
+## More links
+
+- [GitHub Home](https://github.com/ShenBao)
+- [Blog Home](https://shenbao.github.io)
+- [About Me](https://shenbao.github.io/about/)
