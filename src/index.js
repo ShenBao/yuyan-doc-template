@@ -10,7 +10,6 @@ import './style.scss';
 import 'highlight.js/styles/github-gist.css';
 
 import {handlerContent, getTitle} from './utils';
-import Loading from './components/Loading';
 import Footer from './components/Footer';
 
 const {
@@ -35,6 +34,21 @@ window.emojify &&
       CODE: 1,
     },
   });
+
+function PageTool({url}) {
+  let pagePath = url.replace(`/${REPOSITORY_NAME}`, '');
+  return (
+    <div className="page-tool">
+      <a
+        href={`https://github.com/${GITHUB_USERNAME}/${REPOSITORY_NAME}/blob/master${pagePath}`}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        编辑本页面
+      </a>
+    </div>
+  );
+}
 
 function App() {
   const hash = (location.hash || '').split('#')[1] || '';
@@ -149,15 +163,7 @@ function App() {
         />
         <Footer />
       </div>
-      <div className="page-tool">
-        <a
-          href={`https://github.com/${GITHUB_USERNAME}/${REPOSITORY_NAME}/blob/master${pageUrl}`}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          编辑本页面
-        </a>
-      </div>
+      <PageTool url={pageUrl} />
     </div>
   );
 }
