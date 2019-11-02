@@ -1,16 +1,24 @@
 {
   "name": "yuyan-doc-template",
   "version": "1.0.0",
-  "description": "",
+  "description": "- 支持 md 文件\r - 代码高亮\r - 支持Emoji表情",
   "main": "index.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --config webpack.development.config.js",
     "build": "cross-env NODE_ENV=production webpack --config webpack.production.config.js",
     "index": "node zbuild.index.html.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["yuyan", "yuyan-doc", "yuyan-doc-template"],
+  "author": "ShenBao(shenbaoone@gmail.com)",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShenBao/yuyan-doc-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ShenBao/yuyan-doc-template/issues"
+  },
+  "homepage": "https://github.com/ShenBao/yuyan-doc-template#readme",
   "devDependencies": {
     "@babel/core": "^7.10.3",
     "@babel/plugin-proposal-class-properties": "^7.10.4",
